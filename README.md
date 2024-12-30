@@ -2,7 +2,7 @@
 
 ## Background
 
-You can find the instructions for this lab [here](https://morethanequations.com/Computer-Science/Labs/2024-12-10-hello-world). Update `main.cpp` with the code for your submission.
+You can find the instructions for this lab [here](https://morethanequations.com/Computer-Science/Labs/2024-12-10-hello-world). Update `hello.cpp` with the code for your submission.
 
 ## (Optional) CMake Setup
 
