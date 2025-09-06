@@ -5,6 +5,6 @@
 
 #include "../src/hello.hpp"
 
-TEST_CASE( "it computes the factorial of different numbers" ) {
+TEST_CASE( "it returns Hello World" ) {
     REQUIRE( hello() == "Hello World!" );
 }
