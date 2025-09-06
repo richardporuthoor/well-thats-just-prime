@@ -1,24 +1,36 @@
 # Hello World (C++)
 
-## Background
+You can find the instructions for this lab at [More Than Equations][more-than-equations]. Create a new repository on GitHub to house your code. Be sure to make the repository public so that I can view and grade it.
 
-You can find the instructions for this lab [here](https://morethanequations.com/Computer-Science/Labs/2024-12-10-hello-world). Update `hello.cpp` with the code for your submission.
+We will use [CMake][cmake] to build executables (e.g. tests, the driver program, the benchmarks, etc.). Additionally, we will use [Catch2][catch2] for unit testing and benchmarking.
 
-## (Optional) CMake Setup
+## Building Executables With CMake
 
-[CMake](https://cmake.org/) is a build system that allows you to compile, build, test, and manage C++ projects. It is a powerful utility with a bit of a learning curve. You do not have to use CMake for our classes, but you are welcome to use the utility to manage your project. Additionally, many editors and IDEs interface very nicely with CMake.
-
-### Building and Running the Program
-
-First, clone this repository to your computer. Then, you can build the project by running the following commands in the root of the project:
+You can use CMake to compile and build the executables for the project. First, you need to create a `build/` directory in the project. The build directory will house all of the compiled files as well as the `Makefile` for the project. Note that we do NOT check the `build/` directory into version control since each person will have to regenerate the executables on their own machine.
 
 ```bash
-cmake -S . -B build
-cmake --build build
+mkdir build
+cd build
 ```
 
-This will generate a `build` directory with a [Makefile](https://makefiletutorial.com/) and executable. You can run the program by running:
+Once you are inside of the build directory, you can run the following command to build all of the executables for the project:
 
 ```bash
-build/hello
+cmake .. && make
 ```
+
+## Testing the App
+
+Any tests that you define in the `tests/` directory must have a corresponding entry in `CMakeLists.txt`. After you build executables using CMake, you can run the corresponding test files from within the `build/` directory.
+
+## Running the App
+
+The `main.cpp` file at the root of the project must have a corresponding entry in `CMakeLists.txt`. After you build executables using CMake, you can run the driver program from within the `build/` directory.
+
+## Running Benchmarks
+
+Benchmarking is provided with Catch2. You can write benchmarking assertions alongside test assertions right in your test files.
+
+[catch2]: https://github.com/catchorg/Catch2
+[cmake]: https://cmake.org/
+[more-than-equations]: https://morethanequations.com/Computer-Science/Labs/Hello-World
