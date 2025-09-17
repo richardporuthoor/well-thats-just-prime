@@ -5,3 +5,5 @@
 int main() {
   std::cout << hello() << std::endl;
 }
+
+// test comment
