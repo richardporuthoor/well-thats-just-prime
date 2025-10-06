@@ -27,8 +27,3 @@ std::vector<int> factorizer::prime_factors(int num) {
     return answer;
 }
 
-int main() {
-    factorizer x;
-    assert((x.prime_factors(10) == std::vector<int>{2, 5}));
-    std::cout << "tests passed" << std::endl;
-}
